@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            width: 100vw;
+        }
+        
+        h1 {
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 50px;
+            color: chartreuse;
+            font-style: italic;
+        }
+        
+        .full {
+            border: 2px solid red;
+            height: 100vh;
+            background-color: black;
+        }
+        
+        #text1 {
+            width: 250px;
+            margin: 10px;
+        }
+        
+        #result {
+            width: 250px;
+            margin: 10px;
+        }
+        
+        input {
+            width: 60px;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+        
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 100vw;
+        }
+        
+        .num {
+            height: 50%;
+            text-align: center;
+        }
+    </style>
+    }
+
+</head>
+
+<body>
+    <div class="full">
+        <h1>CALUCATOR</h1>
+        <div class="form">
+            <input type="text" name="calculation" id="text1" placeholder="ENTER">
+            <input type="text" id="result" name="ram" placeholder="RESULT"></div>
+        <div class="num">
+            <input type="button" value="1" onclick="wer(1);">
+            <input type="button" value="2" onclick="wer(2); ">
+            <input type="button" value="3" onclick="wer(3)">
+            <input type="button" value="+" onclick="wer('+')">
+            <br>
+            <input type="button" value="4" onclick="wer(4)">
+            <input type="button" value="5" onclick="wer(5)">
+            <input type="button" value="6" onclick="wer(6)">
+            <input type="button" value="-" onclick="wer('-')">
+            <br>
+            <input type="button" value="7" onclick="wer(7)">
+            <input type="button" value="8" onclick="wer(8)">
+            <input type="button" value="9" onclick="wer(9)">
+            <input type="button" value="*" onclick="wer('*')">
+            <br>
+            <input type="button" value="0" onclick="wer(0)">
+            <input type="button" value="00" onclick="wer(00)">
+            <input type="button" value="." onclick="wer('.')">
+            <input type="button" value="/" onclick="wer('/')">
+            <br>
+
+            <input type="button" value="clear" onclick="clear1()">
+            <input type="button" value="=" onClick="result1()">
+        </div>
+
+        <script>
+            function wer(a) {
+
+                document.getElementById('text1').value += a;
+
+            }
+
+            function clear1() {
+
+                document.getElementById('text1').value = ' ';
+                document.getElementById('result').value = ' ';
+
+            }
+
+            function result1() {
+
+                document.getElementById('result').value = eval(document.getElementById('text1').value);
+            }
+        </script>
+    </div>
+</body>
+
+</html>
